@@ -1,11 +1,17 @@
 /* -------------------------------------- ENCABEZADO -------------------------------------- */
+body{
+    margin: 0;
+    padding: 0;
+}
+
 .encabezado{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 320px;
     box-shadow: 0 2px 6px rgba(101, 99, 99, 0.3);
-    font-size: 20px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
@@ -41,7 +47,7 @@
     gap: 30px;
 }
 
-.uno, .tres{
+.uno, .tres, .cinco{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,8 +57,22 @@
     overflow: hidden;
 }
 
-.tres{
+.dos, .cuatro{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 75%;
+    max-width: 1450px;
+    background-color: #0144b4;
+    overflow: hidden;
+}
+
+.tres, .cinco{
     background-color: #d51631;
+}
+
+.cuatro{
+    background-color: #1e3932;
 }
 
 .imagen-banner{
@@ -65,15 +85,6 @@
     color: white;
     text-align: center;
     width: 50%;
-}
-
-.titulo-uno, .titulo-tres{
-    font-size: 1.875rem;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -1px; /* Espaciado entre letras */
-}
-
-.texto-uno, .texto-tres, .texto-uno-dos, .texto-tres-dos{
     line-height: 1.8; /* Espaciado en salto de linea */
     letter-spacing: .5px; /* Espaciado entre letras */
     font-size: 1.188rem;
@@ -81,6 +92,34 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.titulo{
+    font-size: 1.875rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4; /* Espaciado en salto de linea */
+    letter-spacing: -1px; /* Espaciado entre letras */
+}
+
+.boton-cinco {
+    padding: 6px 20px;
+    border: 2px solid white; 
+    background-color: transparent; 
+    color: inherit; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center; 
+}
+
+.boton-cinco a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.boton-cinco:hover {
+    background-color: white;
+    color: white;
+    border-color: white;
+}
 
 /* -------------------------------------- PIE PAGINA -------------------------------------- */
 .pie-pagina{
@@ -92,7 +131,11 @@
     font-family:"Sodo Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-
+.pie-pagina img{
+    width: 55px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
 
 
 
