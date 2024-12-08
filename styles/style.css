@@ -1,13 +1,10 @@
 /* -------------------------------------- ENCABEZADO -------------------------------------- */
 body{
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .encabezado{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 15px 320px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
     font-size: 14px;
@@ -16,21 +13,19 @@ body{
     font-weight: 600;
 }
 
-.encabezado .lado-izquierdo{
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.encabezado img{
+.navbar-izquierda img{
     width: 55px;
     border-radius: 50%;
-    margin-right: 20px;
 }
 
 .encabezado nav{
     display: flex;
-    gap: 40px; /* Espacio entre elementos */
+    justify-content: space-between;
+}
+.navbar-izquierda, .navbar-derecha{
+    display: flex;
+    align-items: center;
+    gap: 45px;
 }
 
 .encabezado a{
@@ -47,7 +42,7 @@ body{
     gap: 30px;
 }
 
-.uno, .tres, .cinco{
+.banner-uno, .banner-tres, .banner-cinco{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,7 +52,7 @@ body{
     overflow: hidden;
 }
 
-.dos, .cuatro{
+.banner-dos, .banner-cuatro{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -67,11 +62,11 @@ body{
     overflow: hidden;
 }
 
-.tres, .cinco{
+.banner-tres, .banner-cinco{
     background-color: #d51631;
 }
 
-.cuatro{
+.banner-cuatro{
     background-color: #1e3932;
 }
 
@@ -100,7 +95,8 @@ body{
 }
 
 .boton-cinco {
-    padding: 6px 20px;
+    text-decoration: none;
+    padding: 6px 12px;
     border: 2px solid white; 
     background-color: transparent; 
     color: inherit; 
@@ -133,8 +129,5 @@ body{
 
 .pie-pagina i{
     width: 55px;
-    
-}
-.pie-pagina i:{
-    
+    color: black;
 }
