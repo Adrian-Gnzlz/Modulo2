@@ -131,18 +131,10 @@ body{
     font-family:"Sodo Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-.pie-pagina img{
+.pie-pagina i{
     width: 55px;
-    border-radius: 50%;
-    margin-right: 20px;
+    
 }
-
-
-
-
-
-
-/* -------------------------------------- PROYECTOS -------------------------------------- */
-img, video{
-    width: 600px;
+.pie-pagina i:{
+    
 }
