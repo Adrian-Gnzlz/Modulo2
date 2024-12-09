@@ -69,10 +69,7 @@ body{
 .contenedor-banners {
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
-    padding-bottom: 20px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
 }
 
 .contenedor-banners div{
@@ -81,8 +78,6 @@ body{
     width: 100%;
     max-width: 1400px;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
 }
 
 .banner-uno, .banner-tres, .banner-cinco{
@@ -93,16 +88,17 @@ body{
     max-width: 1450px;
     background-color: #1e3932;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .banner-dos, .banner-cuatro{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    width: 100%;
     max-width: 1450px;
     background-color: #0144b4;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .banner-tres, .banner-cinco{
@@ -119,14 +115,19 @@ body{
 }
 
 .texto-banner{
-    padding: 20px;
     color: white;
     text-align: center;
-    width: 50%;
     line-height: 1.8; /* Espaciado en salto de linea */
     letter-spacing: .5px; /* Espaciado entre letras */
     font-size: 1.188rem;
     font-weight: 400;
+}
+
+.texto-banner p{
+    margin: 10px;
+}
+.texto-banner a{
+    margin-top: 20px;
 }
 
 .titulo{
@@ -137,8 +138,8 @@ body{
 
 .boton-cinco {
     text-decoration: none;
-    padding: 6px 12px;
-    border: 2px solid white; 
+    padding: 1px 18px;
+    border: 1px solid white; 
     background-color: transparent; 
     color: inherit; 
     font-size: 16px; 
@@ -157,6 +158,84 @@ body{
     color: white;
     border-color: white;
 }
+
+
+
+
+.banner-seis{
+    display: flex;
+    align-items: end;
+    gap: 30px;
+}
+
+.banner-seis img{
+    width: 685px;
+}
+
+
+
+.banner-seis-izquierda{
+    background-color: #f6bfd9;
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.banner-seis-izquierda p{
+    color: #de365c;
+    margin: 0 0 16px 0;
+}
+.banner-seis-izquierda a{
+    text-decoration: none;
+    padding: 1px 18px;
+    border: 1px solid #de365c; 
+    color: #de365c; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center; 
+    margin: 0;
+    margin-top: 20px;
+}
+
+.banner-seis-derecha{
+    background-color: #98cde4;
+    height: 775px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.banner-seis-derecha p{
+    color: #013c4a;
+    margin: 0 0 16px 0;
+}
+.banner-seis-derecha a{
+    text-decoration: none;
+    padding: 1px 18px;
+    border: 1px solid #013c4a; 
+    color: #013c4a; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center; 
+    margin: 0;
+    margin-top: 20px;
+}
+
+.banner-seis-izquierda .texto-banner, .banner-seis-derecha .texto-banner{
+    width: 258px;
+    margin: 32px 16px;
+}
+
+.banner-seis-derecha .texto-banner{
+    width: 200px;
+    margin: 32px 16px;
+}
+
+
+
+
+
 
 /* -------------------------------------- PIE PAGINA -------------------------------------- */
 .pie-pagina{
