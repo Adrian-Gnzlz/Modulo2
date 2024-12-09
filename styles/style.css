@@ -5,26 +5,29 @@ body{
 }
 
 /* -------------------------------------- ENCABEZADO -------------------------------------- */
-.encabezado nav{
-    display: grid;
-    grid-template-columns:1fr repeat(2, 2fr) 1fr;
-    grid-template-rows: 100px repeat(2, 2fr);
+.encabezado {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
-    
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.encabezado nav{
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar-izquierda, .navbar-derecha{
     display: flex;
     align-items: center;
-    gap: 8%;
-    grid-column: 2/3;
-    letter-spacing: 1px;
+    gap: 30px;
 }
 
-.navbar-derecha{
-    justify-content: end;
-    grid-column: 3/4;
-}
 
 .navbar-derecha i{
     font-size: 20px;
@@ -47,7 +50,7 @@ body{
     text-decoration: none;
 }
 
-.botones-ingresar-unete .boton-ingresar{
+.botones-ingresar-unete .boton-ingresar, .boton-unete{
     padding: 6px 16px;
     border: 1px solid black; 
     background-color: transparent; 
@@ -58,94 +61,58 @@ body{
 }
 
 .botones-ingresar-unete .boton-unete{
-    padding: 6px 14px;
-    border: 1px solid black; 
+    padding: 6px 14px; 
     background-color: black;
     color: white;
-    font-size: 16px; 
-    font-weight: 600;
-    border-radius: 25px;
 }
 
 /* -------------------------------------- MAIN -------------------------------------- */
 .contenedor-banners {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(5, 466px);
+    row-gap: 30px;
 }
 
-.banner-uno, .banner-tres, .banner-cinco{
+.banner-uno, .banner-dos, .banner-tres, .banner-cuatro, .banner-cinco{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 75%;
-    max-width: 1450px;
+    grid-column: 1/3;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1400px;
+    min-height: 466px;
+}
+
+.banner-uno{
     background-color: #1e3932;
-    overflow: hidden;
+    grid-row: 1/2;
 }
 
-.banner-dos, .banner-cuatro{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 75%;
-    max-width: 1450px;
+.banner-dos{
     background-color: #0144b4;
-    overflow: hidden;
+    grid-row: 2/3;
 }
 
-.banner-tres, .banner-cinco{
+.banner-tres{
     background-color: #d51631;
+    grid-row: 3/4;
 }
 
 .banner-cuatro{
     background-color: #1e3932;
+    grid-row: 4/5;
 }
+
+.banner-cinco{
+    background-color: aqua;
+    grid-row: 5/6;
+}
+
+
 
 .imagen-banner{
     width: 50%;
     height: auto;
-}
-
-.texto-banner{
-    padding: 20px;
-    color: white;
-    text-align: center;
-    width: 50%;
-    line-height: 1.8; /* Espaciado en salto de linea */
-    letter-spacing: .5px; /* Espaciado entre letras */
-    font-size: 1.188rem;
-    font-weight: 400;
-}
-
-.titulo{
-    font-size: 1.875rem;
-    line-height: 1.4; /* Espaciado en salto de linea */
-    letter-spacing: -1px; /* Espaciado entre letras */
-}
-
-.boton-cinco {
-    text-decoration: none;
-    padding: 6px 12px;
-    border: 2px solid white; 
-    background-color: transparent; 
-    color: inherit; 
-    font-size: 16px; 
-    font-weight: 600;
-    border-radius: 25px;
-    text-align: center; 
-}
-
-.boton-cinco a, .mensaje-fijo-cookies a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.boton-cinco:hover {
-    background-color: white;
-    color: white;
-    border-color: white;
 }
 
 /* -------------------------------------- PIE PAGINA -------------------------------------- */
