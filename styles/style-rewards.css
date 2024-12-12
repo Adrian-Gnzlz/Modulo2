@@ -85,7 +85,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 35%;
+    width: 40%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -104,7 +104,7 @@
 }
 
 .imagen-side img{
-    width: 75%;
+    width: 90%;
     height: auto;
 }
 
@@ -121,6 +121,30 @@
     grid-column: 2/20;
     grid-row: 1/11;
 
+}
+
+.botones-texto-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+}
+
+.botones-texto-side a{
+    text-decoration: none;
+    padding: 5px 8px;
+    border: 1px solid white; 
+    background-color: transparent; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.botones-texto-side #boton-unete-ahora {
+    background-color: white;
+    color: black;
 }
 
 .texto-side img{
@@ -140,7 +164,7 @@
 .main{
     display: flex;
     justify-content: center;
-    grid-column: 8/21;
+    grid-column: 9/21;
     grid-row: 1/12;
     margin-left: 2;
     height: auto;
@@ -157,7 +181,7 @@
     grid-column: 1/21;
 }
 .primera-division img{
-    
+
 }
 
 
