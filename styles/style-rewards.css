@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+/* -------------------------------------- ENCABEZADO -------------------------------------- */
+.encabezado {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+    justify-content: center;
+    padding-right: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+.encabezado nav{
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-izquierda, .navbar-derecha{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-derecha i{
+    font-size: 20px;
+}
+
+.navbar-izquierda img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.encabezado a{
+    color: black;
+    text-decoration: none;
+    font-weight:900;
+}
+
+.botones-ingresar-unete{
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.botones-ingresar-unete .boton-ingresar, .boton-unete{
+    padding: 6px 16px;
+    border: 1px solid black; 
+    background-color: transparent; 
+    color: inherit; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+.botones-ingresar-unete .boton-unete{
+    padding: 6px 14px; 
+    background-color: black;
+    color: white;
+}
+
+/* -------------------------------------- SIDE -------------------------------------- */
+.grid-rewards{
+    margin-top: 94px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    row-gap: 10px;
+    height: 100vh;
+}
+
+.side{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+    background-color: #1b4036;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.imagen-side{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    grid-column: 5/8;
+    grid-row: 12/26;
+}
+
+.imagen-side img{
+    width: 75%;
+    height: auto;
+}
+
+.texto-side{
+    display: grid;
+    grid-column: 1/8;
+    grid-row: 12/15;
+}
+
+.imagen-texto-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/20;
+    grid-row: 1/11;
+
+}
+
+.texto-side img{
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.texto-side h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+
+/* -------------------------------------- MAIN -------------------------------------- */
+.main{
+    display: flex;
+    justify-content: center;
+    grid-column: 8/21;
+    grid-row: 1/12;
+    margin-left: 2;
+    height: auto;
+    margin: 40PX;
+}
+
+.primera-division{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.primera-division p{
+    grid-column: 1/21;
+}
+.primera-division img{
+    
+}
+
+
+
+
+/* -------------------------------------- RESPONSIVE -------------------------------------- */
+@media screen and (max-width:1023px) {
+    .side{
+        position: static;
+        width: 100%;
+        height: auto;
+        grid-column: 1/22;
+        grid-row: 1/9;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(25, 1fr);
+        background-color: #1b4036;
+        overflow: hidden;
+    }
+    .imagen-texto-side{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1/21;
+        grid-row: 1/11;
+    }
+    
+
+    .main{
+        display: flex;
+        justify-content: center;
+        grid-column: 1/22;
+        grid-row: 9/12;
+        margin-left: 2;
+        height: auto;
+    }
+
+    .texto-side{
+        grid-column: 1/8;
+        grid-row: 3/20;
+    }
+
+    .texto-side a{
+        text-decoration: none;
+        padding: 4px 100px;
+        border: 1px solid white; 
+        background-color: transparent; 
+        color: white; 
+        font-size: 16px; 
+        font-weight: 600;
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+    #boton-unete-ahora {
+        background-color: white;
+        color: black;
+    }
+}
