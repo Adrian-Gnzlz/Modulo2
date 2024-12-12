@@ -164,15 +164,15 @@ body{
 
 .banner-seis{
     display: flex;
-    align-items: end;
+    width: 100%;
     gap: 30px;
+    max-width: 1450px;
+    overflow: hidden;
 }
 
 .banner-seis img{
-    width: 685px;
+    width: 100%;
 }
-
-
 
 .banner-seis-izquierda{
     background-color: #f6bfd9;
