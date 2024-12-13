@@ -162,6 +162,7 @@ body{
 
 
 
+
 .banner-seis{
     display: flex;
     width: 100%;
@@ -368,6 +369,92 @@ body{
 
 
 /* -------------------------------------- COOKIES -------------------------------------- */
-@media screen and (max-width:1023px) {
+@media screen and (max-width:767px) {
+    .banner-uno, .banner-tres, .banner-cinco{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #1e3932;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .banner-dos, .banner-cuatro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1450px;
+        background-color: #0144b4;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .banner-tres, .banner-cinco{
+        background-color: #d51631;
+    }
+
+    .banner-cuatro{
+        background-color: #1e3932;
+    }
+
+    .imagen-banner{
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo{
+        font-size: calc(1.0875rem + 1.05vw);
+        line-height: 1.4; /* Espaciado en salto de linea */
+        letter-spacing: -1px; /* Espaciado entre letras */
+        margin-bottom: 0;
+    }
     
+    .texto-banner{
+        color: white;
+        text-align: center;
+        line-height: 1.8; /* Espaciado en salto de linea */
+        letter-spacing: .5px; /* Espaciado entre letras */
+        font-size: 1.188rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .banner-seis{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 30px;
+    }
+
+    .banner-seis-izquierda{
+        color: #de365c;
+        margin: 0 0 16px 0;
+        height: auto;
+    }
+
+    .banner-seis-derecha{
+        background-color: #98cde4;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .banner-seis-izquierda p{
+        color: #de365c;
+        margin: 0 0 16px 0;
+        width: 500px;
+    }
+
+    .banner-seis-derecha p{
+        color: #013c4a;
+        margin: 0 0 16px 0;
+        width: 500px;
+    }
+
+    .no-mostrar{
+        display: none;
+    }
 }
