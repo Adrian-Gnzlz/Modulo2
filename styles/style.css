@@ -13,6 +13,7 @@ body{
     justify-content: center;
     padding-right: 20px;
     padding-left: 20px;
+    overflow: hidden;
 }
 
 .encabezado nav{
@@ -25,7 +26,7 @@ body{
 .navbar-izquierda, .navbar-derecha{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .navbar-derecha i{
@@ -38,31 +39,82 @@ body{
 }
 
 .encabezado a{
-    color: black;
+    color: rgba(0, 0, 0, .87);
     text-decoration: none;
     font-weight:900;
+    letter-spacing: 1px;
+}
+
+.navbar-izquierda div a{
+    position: relative;
+    margin-right: 50px;
+    letter-spacing: 2px;
+}
+.navbar-izquierda div a:hover{
+    position: relative;
+    color: #01754a;
+    box-shadow: 0 54px 0 2px  #01754a;
+}
+
+.localizar-tienda a:hover, 
+.botones-ingresar-unete .boton-ingresar:hover {
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.localizar-tienda a:hover {
+    color: #4d4d4d;
+}
+
+.botones-ingresar-unete .boton-ingresar:hover, .boton-unete:hover{
+    padding: 5px 16px;
+    border: 1px solid #4d4d4d; 
+    background-color: transparent; 
+    color: #4d4d4d; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    
+    transition: background-color 0.5s ease;
+}
+
+.botones-ingresar-unete .boton-unete:hover{
+    padding: 5px 14px; 
+    background-color: #333333;
+    color: white;
+}
+
+.botones-ingresar-unete .boton-unete{
+    padding: 5px 14px; 
+    background-color: black;
+    color: white;
 }
 
 .botones-ingresar-unete{
     display: flex;
+    align-items: center;
     gap: 20px;
     text-decoration: none;
 }
 
 .botones-ingresar-unete .boton-ingresar, .boton-unete{
-    padding: 6px 16px;
-    border: 1px solid black; 
+    padding: 5px 16px;
+    border: 1px solid rgba(0, 0, 0, .87); 
     background-color: transparent; 
-    color: inherit; 
+    color: rgba(0, 0, 0, .87); 
     font-size: 16px; 
     font-weight: 600;
     border-radius: 25px;
 }
 
 .botones-ingresar-unete .boton-unete{
-    padding: 6px 14px; 
+    padding: 5px 14px; 
     background-color: black;
     color: white;
+}
+
+.boton-unete:hover{
+    background-color: #333333;
 }
 
 /* -------------------------------------- MAIN -------------------------------------- */
@@ -79,6 +131,43 @@ body{
     max-width: 1400px;
     display: flex;
 }
+
+.imagen-banner{
+    width: 50%;
+    height: auto;
+}
+
+.texto-banner, .texto-banner-dos{
+    display: flex;
+    color: white;
+    text-align: center;
+    line-height: 1.8; /* Espaciado en salto de linea */
+    letter-spacing: .5px; /* Espaciado entre letras */
+    font-size: 1.188rem;
+    font-weight: 400;
+    padding: 32px 24px;
+    margin-right: 15px;
+}
+
+.texto-banner-dos{
+    margin-right: 0;
+    padding: 32px 16px;
+}
+
+.texto-banner div{
+    max-width: 500px;
+    gap: 25px;
+}
+
+.texto-banner-dos div{
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+#tituloDosBanerCuatro, #tituloBannerDos, #tituloBannerTres{
+    margin-bottom: 25px;
+}
+
 
 .banner-uno, .banner-tres, .banner-cinco{
     display: flex;
@@ -109,23 +198,11 @@ body{
     background-color: #1e3932;
 }
 
-.imagen-banner{
-    width: 50%;
-    height: auto;
+
+.banner-uno{
+    gap: 15px;
 }
 
-.texto-banner{
-    color: white;
-    text-align: center;
-    line-height: 1.8; /* Espaciado en salto de linea */
-    letter-spacing: .5px; /* Espaciado entre letras */
-    font-size: 1.188rem;
-    font-weight: 400;
-}
-
-.texto-banner p{
-    margin: 10px;
-}
 .texto-banner a{
     margin-top: 20px;
 }
@@ -134,7 +211,17 @@ body{
     font-size: 1.875rem;
     line-height: 1.4; /* Espaciado en salto de linea */
     letter-spacing: -1px; /* Espaciado entre letras */
+    margin: 0;
 }
+
+#tituloBannerTres{
+    max-width: 330px;
+} 
+
+#textoB2{
+    max-width: 500px;
+}
+
 
 .boton-cinco {
     text-decoration: none;
@@ -146,17 +233,11 @@ body{
     font-weight: 600;
     border-radius: 25px;
     text-align: center; 
-}
-
-.boton-cinco a, .mensaje-fijo-cookies a{
-    text-decoration: none;
-    color: inherit;
+    transition: background-color 0.5s ease;
 }
 
 .boton-cinco:hover {
-    background-color: white;
-    color: white;
-    border-color: white;
+    background-color: #db294b;
 }
 
 
@@ -177,11 +258,16 @@ body{
 
 .banner-seis-izquierda{
     background-color: #f6bfd9;
-    height: 775px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
+
+.texto-banner p, .texto-banner-dos p{
+    margin: 0;
+}
+
 .banner-seis-izquierda p{
     color: #de365c;
     margin: 0 0 16px 0;
@@ -196,12 +282,12 @@ body{
     border-radius: 25px;
     text-align: center; 
     margin: 0;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .banner-seis-derecha{
     background-color: #98cde4;
-    height: 775px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -220,7 +306,7 @@ body{
     border-radius: 25px;
     text-align: center; 
     margin: 0;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .banner-seis-izquierda .texto-banner, .banner-seis-derecha .texto-banner{
@@ -266,7 +352,17 @@ body{
     padding-top: 20px;
 }
 
+.links-RS i:hover{
+    color: #333333;
+    transform: translateY(-3px);
+}
+
 .sobre-nosotros a, .atencion-al-cliente a{
+    line-height: 3;
+    text-decoration: none;
+    color: #777;
+}
+.sobre-nosotros a:hover, .atencion-al-cliente a:hover{
     line-height: 3;
     text-decoration: none;
     color: black;
@@ -277,7 +373,7 @@ body{
 }
 .sobre-nosotros p, .atencion-al-cliente p{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .pie-pagina i{
@@ -296,6 +392,14 @@ body{
 }
 
 .contenedor-links-extra a{
+    border-right: 2px solid #999;
+    padding-right: 10px;
+    padding-left: 5px;
+    text-decoration: none;
+    color: #999;
+}
+
+.contenedor-links-extra a:hover{
     border-right: 2px solid #777777;
     padding-right: 10px;
     padding-left: 5px;
@@ -314,13 +418,13 @@ body{
 .contenedor-copyright p{
     display: flex;
     justify-content: center;
-    color: #777777;
-    font-size: 11px;
+    color: #999;
+    font-size: 15px;
     margin-bottom: 3px;
 }
 
 .contenedor-copyright #textoChico{
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 0;
 }
 
