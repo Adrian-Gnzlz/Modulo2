@@ -467,6 +467,10 @@ body{
     width: 100%;
 }
 
+.mensaje-fijo-cookies u{
+    color: black;
+}
+
 .invisible{
     display: none;
 }
