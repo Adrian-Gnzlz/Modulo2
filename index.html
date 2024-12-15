@@ -13,13 +13,40 @@
     <header class="encabezado">
         <nav>
             <section class="navbar-izquierda">
-                <a href="index.html"><img src="./assets/iconos-RS/logostarbacks.svg" alt="Logo Starbucks no carga"></a>
-                <div>
+                <a href="index.html"><img src=".//assets/iconos-RS/logostarbacks.svg" alt="Logo Starbucks no carga" class="logo-starbacks"></a>
+                <div class="etiquetas-menu-rewards">
                     <a href="#">MENU</a>
                     <a href="rewards.html">REWARDS</a>
                 </div>
-            </section>    
-            <section class="navbar-derecha">
+            </section> 
+            
+            <section class="navbar-derecha-chiquito">
+                <input type="checkbox" id="alternarMenu" class="menu-alternar">
+                <label for="alternarMenu" class="boton-selector">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </label>  
+                
+                <div class="navbar-derecha selector-desplegable">
+                    <ul>
+                        <li>
+                            <a href="#">MENU</a>
+                        </li>
+                        <li>
+                            <a href="rewards.html">REWARDS</a>
+                        </li>
+                        <li class="localizar-tienda">
+                            <a href="https://www.google.com.mx/maps/"><i class="fa-solid fa-location-dot"></i>Localizar Tienda</a>
+                        </li>
+                        <li class="botones-ingresar-unete">
+                            <a href="#" class="boton-ingresar">Ingresar</a>
+                            <a href="#" class="boton-unete">Únete</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="navbar-derecha">
                 <div class="localizar-tienda">
                     <a href="https://www.google.com.mx/maps/"><i class="fa-solid fa-location-dot"></i>Localizar Tienda</a>
                 </div>
@@ -27,7 +54,7 @@
                     <a href="#" class="boton-ingresar">Ingresar</a>
                     <a href="#" class="boton-unete">Únete</a>
                 </div>
-            </section>
+            </div>
         </nav>
     </header>
 
