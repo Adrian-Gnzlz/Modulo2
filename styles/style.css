@@ -329,10 +329,14 @@ body{
 
 
 /* -------------------------------------- FOOTER -------------------------------------- */
+.pie-pagina .contenedor-sobre-nosotros-chiquito, .pie-pagina .contenedor-atencion-cliente-chiquito{
+    display: none;
+}
+
 .pie-pagina{
     display: flex;
     flex-direction: column;
-    height: 470px;
+    height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
@@ -531,9 +535,6 @@ body{
         color: #aaaaaa;
     }
 
-    /* .boton-selector .fa-bars{
-        display: inline-block;
-    } */
     .boton-selector .fa-xmark{
         display: none;
     }
@@ -713,12 +714,104 @@ body{
     }
 
 
-    .pie-pagina{
-        margin-top: 20px;
-    }
+    
 
 
 /* --------------------------------- Footer --------------------------------- */
-    
+    .pie-pagina .contenedor-sobre-nosotros-chiquito, 
+    .pie-pagina .contenedor-atencion-cliente-chiquito{
+        display: block;
+    }
 
+    .contenedor-textos div, .desplegar-sobre-nosotros, .desplegar-atencion-cliente{
+        display: none;
+    }
+
+    .pie-pagina{
+        display: flex;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .pie-pagina section{
+        width: 100%;
+    }
+
+    .boton-desplegar-sobre-nosotros, .boton-desplegar-atencion-cliente{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba(0, 0, 0, .87);
+    }
+    .boton-desplegar-sobre-nosotros p, .boton-desplegar-atencion-cliente p{
+        display: flex;
+        justify-content: start;
+    }
+
+    .boton-desplegar-sobre-nosotros i, .boton-desplegar-atencion-cliente i{
+        display: flex;
+        justify-content: end;
+    }
+
+    .pie-pagina .contenedor-sobre-nosotros-chiquito,
+    .pie-pagina .contenedor-atencion-cliente-chiquito{
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .pie-pagina .contenedor-sobre-nosotros-chiquito i,
+    .pie-pagina .contenedor-atencion-cliente-chiquito i{
+        font-size: 20px;
+    }
+
+
+    .selector-sobre-nosotros .contenedor-sobre-nosotros li,
+    .selector-atencion-cliente .contenedor-atencion-cliente li{
+        list-style: none;
+        margin-bottom: 25px;
+    }
+
+    .selector-sobre-nosotros .contenedor-sobre-nosotros a,
+    .selector-atencion-cliente .contenedor-atencion-cliente a{
+        color: #777;
+        text-decoration: none;
+    }
+
+    .selector-sobre-nosotros .contenedor-sobre-nosotros a:hover,
+    .selector-atencion-cliente .contenedor-atencion-cliente a:hover{
+        color: black;
+    }
+
+    .pie-pagina .selector-sobre-nosotros ul,
+    .pie-pagina .selector-atencion-cliente ul{
+        padding: 0;
+    }
+
+    .links-extra a{
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+
+
+
+
+    .selector-sobre-nosotros .contenedor-sobre-nosotros{
+        display: none;
+    }
+
+    .desplegar-sobre-nosotros:checked ~ .selector-sobre-nosotros .contenedor-sobre-nosotros{
+        display: block;
+    }
+
+    .selector-atencion-cliente .contenedor-atencion-cliente{
+        display: none;
+    }
+
+    .desplegar-atencion-cliente:checked ~ .selector-atencion-cliente .contenedor-atencion-cliente{
+        display: block;
+    }
 }
