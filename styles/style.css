@@ -250,6 +250,7 @@ body{
 .banner-seis{
     display: flex;
     width: 100%;
+    height: auto;
     gap: 30px;
     max-width: 1450px;
     overflow: hidden;
@@ -261,7 +262,7 @@ body{
 
 .banner-seis-izquierda{
     background-color: #f6bfd9;
-    height: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -290,7 +291,7 @@ body{
 
 .banner-seis-derecha{
     background-color: #98cde4;
-    height: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -442,6 +443,7 @@ body{
     bottom: 0px;
     width: 100%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+    z-index: 9999;
 }
 
 .mensaje-fijo-cookies{
@@ -480,22 +482,13 @@ body{
 
 
 /* -------------------------------------- Queries -------------------------------------- */
-@media screen and (max-width:767px) {
-    .boton-display-chico{
-        display: block;
-    }
-    .navbar-derecha{
-        display: none;
-    }
+@media screen and (max-width:768px) {
 
-    .encabezado-chiquito{
-        display: none;
-    }
+    /* --------------------------------- HEADER --------------------------------- */
     .navbar-derecha-chiquito{
         display: block;
     }
-
-    .etiquetas-menu-rewards{
+    .navbar-derecha, .etiquetas-menu-rewards, .selector-desplegable, .menu-alternar{
         display: none;
     }
 
@@ -503,16 +496,20 @@ body{
         display: flex;
         padding: 15px 20px;
         justify-content: center;
-        box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
         overflow: hidden;
-        position: relative;
+        position: fixed;
         background-color: white;
-        z-index: 1000;
+        width: 100%;
+    }
+
+    .boton-selector{
+        margin-right: 50px;
     }
 
     .menu-alternar:checked ~ .selector-desplegable ul{
-        position: fixed; /* Opcional: si deseas que el menú siga al header */
-        top: 74px; /* Ajusta según la altura del header */
+        position: fixed;
+        top: 73px;
         right: 0;
         z-index: 1000;
     }
@@ -529,21 +526,14 @@ body{
         justify-content: space-between;
     }
 
-    .menu-alternar{
-        display: none;
-    }
-
     .boton-selector{
         font-size: 20px;
         color: #aaaaaa;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
     }
 
-    .boton-selector .fa-bars{
+    /* .boton-selector .fa-bars{
         display: inline-block;
-    }
+    } */
     .boton-selector .fa-xmark{
         display: none;
     }
@@ -555,12 +545,22 @@ body{
         display: inline-block;
     }
 
-    .selector-desplegable{
-        display: none;
-    }
-
     .menu-alternar:checked ~ .selector-desplegable{
         display: block;
+    }
+
+    .boton-selector{
+        cursor: pointer;
+    }
+
+    .contenedor-menu-rewards{
+        margin: 50px 25px;
+    }
+
+    .contenedor-localizarT-botones{
+        margin-top: 40px;
+        font-size: 20px;
+        border-top: 1px solid #eeeeee;
     }
 
     .selector-desplegable ul{
@@ -573,15 +573,152 @@ body{
         position: absolute;
         height: 100%;
         width: 85%;
-        border: 2px solid red;
     }
 
     .selector-desplegable ul li{
-        padding: 10px 20px;
+        font-size: 15px;
+        margin-bottom: 30px;
+        width: 80%;
         cursor: pointer;
     }
 
-    .selector-desplegable ul li:hover{
-        background-color: #ddd;
+    .contenedor-localizarT-botones .localizar-tienda{
+        margin-top: 30px;
     }
+
+    .contenedor-localizarT-botones .botones-ingresar-unete .boton-ingresar{
+        padding: 6px 16px;
+    }
+
+    .contenedor-localizarT-botones .botones-ingresar-unete .boton-unete{
+        padding: 6px 16px;
+    }
+
+
+    /* --------------------------------- MAIN --------------------------------- */
+    main{
+        padding-top: 73px;
+    }
+    
+    .banner-uno, .banner-tres, .banner-cinco{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #1e3932;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .banner-dos, .banner-cuatro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0144b4;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .banner-tres, .banner-cinco{
+        background-color: #d51631;
+    }
+
+    .banner-cuatro{
+        background-color: #1e3932;
+    }
+
+    .imagen-banner{
+        width: 100%;
+        height: auto;
+    }
+
+    .titulo, #tituloBannerDos, #tituloBannerTres{
+        font-size: calc(1.0875rem + 1.05vw);
+        line-height: 1.4;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .texto-banner, .texto-banner-dos{
+        color: white;
+        text-align: center;
+        line-height: 1.8; /* Espaciado en salto de linea */
+        letter-spacing: .5px; /* Espaciado entre letras */
+        font-size: calc(1.0188rem + .2256vw);;
+        font-weight: 400;
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+    .texto-banner div, .texto-banner-dos div{
+        gap: 16px;
+        max-width: 600px;
+    }
+
+    .texto-banner-dos div{
+        max-width: 96%;
+    }
+
+    .texto-banner-dos .titulo-banner-cuatro{
+        gap: 0;
+    }
+    #bannerCuatro h2{
+        margin: 0;
+    }
+    
+
+    .texto-banner-dos div #textoB2{
+        max-width: 96%;
+    }
+
+    .banner-seis{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .banner-seis-izquierda{
+        height: auto;
+    }
+
+    .banner-seis-derecha{
+        background-color: #98cde4;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-seis-izquierda p{
+        color: #de365c;
+        margin: 0 0 16px 0;
+        width: 500px;
+    }
+
+    .banner-seis-derecha p{
+        color: #013c4a;
+        margin: 0 0 16px 0;
+        width: 500px;
+    }
+
+    .banner-seis-izquierda .texto-banner, .banner-seis-derecha .texto-banner{
+        margin: 0;
+        padding: 30px 0;
+        width: 310px;
+    }
+
+    .banner-seis-izquierda .texto-banner p{
+        width: auto;
+        max-width: 100%;
+    }
+
+
+    .pie-pagina{
+        margin-top: 20px;
+    }
+
+
+/* --------------------------------- Footer --------------------------------- */
+    
+
 }
