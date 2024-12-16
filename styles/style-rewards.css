@@ -5,20 +5,22 @@
 }
 
 /* -------------------------------------- ENCABEZADO -------------------------------------- */
+.boton-display-chico, .navbar-derecha-chiquito{
+    display: none;
+}
+
 .encabezado {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
     justify-content: center;
-    padding-right: 20px;
-
+    overflow: hidden;
     position: fixed;
+    background-color: white;
+    z-index: 99999;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: white;
-    z-index: 1000;
+    right: 0;
 }
 
 .encabezado nav{
@@ -31,49 +33,100 @@
 .navbar-izquierda, .navbar-derecha{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .navbar-derecha i{
     font-size: 20px;
 }
 
-.navbar-izquierda img{
+.navbar-izquierda .logo-starbacks{
     width: 50px;
     border-radius: 50%;
 }
 
 .encabezado a{
-    color: black;
+    color: rgba(0, 0, 0, .87);
     text-decoration: none;
     font-weight:900;
+    letter-spacing: 1px;
+}
+
+.navbar-izquierda div a{
+    position: relative;
+    margin-right: 50px;
+    letter-spacing: 2px;
+}
+.navbar-izquierda div a:hover{
+    position: relative;
+    color: #01754a;
+    box-shadow: 0 54px 0 2px  #01754a;
+}
+
+.localizar-tienda a:hover, 
+.botones-ingresar-unete .boton-ingresar:hover {
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+}
+
+.localizar-tienda a:hover {
+    color: #4d4d4d;
+}
+
+.botones-ingresar-unete .boton-ingresar:hover, .boton-unete:hover{
+    padding: 5px 16px;
+    border: 1px solid #4d4d4d; 
+    background-color: transparent; 
+    color: #4d4d4d; 
+    font-size: 16px; 
+    font-weight: 600;
+    border-radius: 25px;
+    
+    transition: background-color 0.5s ease;
+}
+
+.botones-ingresar-unete .boton-unete:hover{
+    padding: 5px 14px; 
+    background-color: #333333;
+    color: white;
+}
+
+.botones-ingresar-unete .boton-unete{
+    padding: 5px 14px; 
+    background-color: black;
+    color: white;
 }
 
 .botones-ingresar-unete{
     display: flex;
+    align-items: center;
     gap: 20px;
     text-decoration: none;
 }
 
 .botones-ingresar-unete .boton-ingresar, .boton-unete{
-    padding: 6px 16px;
-    border: 1px solid black; 
+    padding: 5px 16px;
+    border: 1px solid rgba(0, 0, 0, .87); 
     background-color: transparent; 
-    color: inherit; 
+    color: rgba(0, 0, 0, .87); 
     font-size: 16px; 
     font-weight: 600;
     border-radius: 25px;
 }
 
 .botones-ingresar-unete .boton-unete{
-    padding: 6px 14px; 
+    padding: 5px 14px; 
     background-color: black;
     color: white;
 }
 
+.boton-unete:hover{
+    background-color: #333333;
+}
+
 /* -------------------------------------- SIDE -------------------------------------- */
 .grid-rewards{
-    margin-top: 94px;
+    margin-top: 74px;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(11, 1fr);
@@ -180,15 +233,127 @@
 .primera-division p{
     grid-column: 1/21;
 }
-.primera-division img{
-
-}
 
 
 
 
-/* -------------------------------------- RESPONSIVE -------------------------------------- */
+/* -------------------------------------- Queries -------------------------------------- */
 @media screen and (max-width:1023px) {
+
+    /* --------------------------------- HEADER --------------------------------- */
+    .navbar-derecha-chiquito{
+        display: block;
+    }
+    .navbar-derecha, .etiquetas-menu-rewards, .selector-desplegable, .menu-alternar{
+        display: none;
+    }
+
+    .encabezado{
+        display: flex;
+        padding: 15px 20px;
+        justify-content: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+        overflow: hidden;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+    }
+
+    .boton-selector{
+        margin-right: 50px;
+    }
+
+    .menu-alternar:checked ~ .selector-desplegable ul{
+        position: fixed;
+        top: 74px;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .navbar-izquierda .logo-starbacks{
+        width: 40px;
+    }
+
+    .selector-desplegable ul li a:hover{
+        color: #01754a;
+    }
+
+    .encabezado nav{
+        display: flex;
+        width: 100%;
+        max-width: 1250px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .boton-selector{
+        font-size: 20px;
+        color: #aaaaaa;
+    }
+
+    .boton-selector .fa-xmark{
+        display: none;
+    }
+
+    .menu-alternar:checked + .boton-selector .fa-bars{
+        display: none;
+    }
+    .menu-alternar:checked + .boton-selector .fa-xmark{
+        display: inline-block;
+    }
+
+    .menu-alternar:checked ~ .selector-desplegable{
+        display: block;
+    }
+
+    .boton-selector{
+        cursor: pointer;
+    }
+
+    .contenedor-menu-rewards{
+        margin: 50px 25px;
+    }
+
+
+    .contenedor-localizarT-botones{
+        margin-top: 40px;
+        font-size: 20px;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .selector-desplegable ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        position: absolute;
+        height: 100%;
+        width: 85%;
+    }
+
+    .selector-desplegable ul li{
+        font-size: 15px;
+        margin-bottom: 30px;
+        width: 80%;
+        cursor: pointer;
+    }
+
+    .contenedor-localizarT-botones .localizar-tienda{
+        margin-top: 30px;
+    }
+
+    .contenedor-localizarT-botones .botones-ingresar-unete .boton-ingresar{
+        padding: 6px 16px;
+    }
+
+    .contenedor-localizarT-botones .botones-ingresar-unete .boton-unete{
+        padding: 6px 16px;
+    }
+
+    /* --------------------------------- MAIN --------------------------------- */
+    
     .side{
         position: static;
         width: 100%;
