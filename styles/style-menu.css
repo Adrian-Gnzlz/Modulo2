@@ -385,7 +385,7 @@ body{
 
     .menu-alternar:checked ~ .selector-desplegable ul{
         position: fixed;
-        top: 74px;
+        top: 75px;
         right: 0;
         z-index: 1000;
     }

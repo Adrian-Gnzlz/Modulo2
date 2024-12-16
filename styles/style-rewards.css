@@ -126,7 +126,7 @@
 
 /* -------------------------------------- SIDE -------------------------------------- */
 .grid-rewards{
-    margin-top: 74px;
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(11, 1fr);
